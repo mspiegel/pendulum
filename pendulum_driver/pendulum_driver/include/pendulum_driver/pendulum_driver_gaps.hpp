@@ -21,4 +21,7 @@
 
 #pragma pirate enclave declare(pendulum_driver)
 
+#pragma pirate capability declare(pendulum_simulation)
+#pragma pirate enclave capability(pendulum_driver, pendulum_simulation)
+
 #endif // PENDULUM_MANAGER__PENDULUM_DRIVER_GAPS_HPP_

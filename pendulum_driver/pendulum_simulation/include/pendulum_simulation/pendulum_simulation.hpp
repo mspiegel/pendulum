@@ -25,6 +25,7 @@
 #include <mutex>
 
 #include "pendulum_driver/pendulum_driver_interface.hpp"
+#include "pendulum_driver/pendulum_driver_gaps.hpp"
 #include "pendulum_simulation/runge_kutta.hpp"
 
 #ifndef PI
@@ -54,7 +55,8 @@ struct PendulumState
 ///
 ///  The simulation is based on the equations used in the
 /// <a href="https://www.youtube.com/watch?v=qjhAAQexzLg"> control bootcamp series</a>
-class PendulumSimulation : public PendulumDriverInterface
+class __attribute__((pirate_capability("pendulum_simulation")))
+PendulumSimulation : public PendulumDriverInterface
 {
 public:
   explicit PendulumSimulation(std::chrono::microseconds physics_update_period);
