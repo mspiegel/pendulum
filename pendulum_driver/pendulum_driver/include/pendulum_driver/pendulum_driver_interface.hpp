@@ -28,6 +28,8 @@ namespace pendulum
 class PendulumDriverInterface
 {
 public:
+  virtual ~PendulumDriverInterface() = default;
+
   /// \brief Updates the command data coming from the controller.
   /// \param[in] msg Command data message.
   virtual void update_command_data(const pendulum_msgs_v2::msg::PendulumCommand & msg) = 0;

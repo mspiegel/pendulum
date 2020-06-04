@@ -29,6 +29,8 @@ namespace pendulum
 class PendulumController
 {
 public:
+  virtual ~PendulumController() = default;
+
   /// \brief Updates the setpoint data when a setpoint message arrives.
   /// \param[in] msg Setpoint data message.
   virtual void update_setpoint_data(const pendulum_msgs_v2::msg::PendulumCommand & msg) = 0;
