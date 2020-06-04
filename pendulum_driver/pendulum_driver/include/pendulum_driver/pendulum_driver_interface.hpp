@@ -22,8 +22,6 @@
 #include "pendulum_msgs_v2/msg/pendulum_command.hpp"
 #include "pendulum_msgs_v2/msg/pendulum_state.hpp"
 
-#pragma pirate enclave declare(pendulum_driver)
-
 namespace pendulum
 {
 /// \class This class creates the interface between the driver node and the driver implementation.

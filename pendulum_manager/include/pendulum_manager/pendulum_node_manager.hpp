@@ -29,8 +29,6 @@
 
 #include "pendulum_manager/lifecycle_service_client.hpp"
 
-#pragma pirate enclave declare(pendulum_manager)
-
 namespace pendulum
 {
 

@@ -33,6 +33,7 @@
 #include "rclcpp/rclcpp.hpp"
 #include "rcutils/cmdline_parser.h"
 
+#include "pendulum_driver/pendulum_driver_gaps.hpp"
 #include "pendulum_driver/pendulum_driver_node.hpp"
 #include "pendulum_driver/pendulum_driver_interface.hpp"
 #include "pendulum_simulation/pendulum_simulation.hpp"

@@ -15,11 +15,8 @@
 #include <memory>
 #include <string>
 #include "rcutils/cmdline_parser.h"
+#include "pendulum_manager/pendulum_manager_gaps.hpp"
 #include "pendulum_manager/pendulum_node_manager.hpp"
-
-#ifndef __GAPS__
-#error "gaps compiler must be used"
-#endif
 
 void print_menu()
 {

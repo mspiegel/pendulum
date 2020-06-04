@@ -33,6 +33,7 @@
 #include "rclcpp/rclcpp.hpp"
 #include "rcutils/cmdline_parser.h"
 
+#include "pendulum_controller_node/pendulum_controller_gaps.hpp"
 #include "pendulum_controller_node/pendulum_controller_node.hpp"
 #include "pendulum_controller_node/pendulum_controller.hpp"
 #include "pendulum_controllers/full_state_feedback_controller.hpp"
