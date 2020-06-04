@@ -17,6 +17,10 @@
 #include "rcutils/cmdline_parser.h"
 #include "pendulum_manager/pendulum_node_manager.hpp"
 
+#ifndef __GAPS__
+#error "gaps compiler must be used"
+#endif
+
 void print_menu()
 {
   std::cout << std::endl;
@@ -50,7 +54,8 @@ void print_menu()
   std::cout << "Enter your choice : ";
 }
 
-int main(int argc, char ** argv)
+
+int main(int argc, char ** argv) __attribute__((pirate_enclave_main("pendulum_manager")))
 {
   std::string manager_node_name = "pendulum_manager";
   std::string controller_node_name = "pendulum_controller";
