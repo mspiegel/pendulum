@@ -106,7 +106,7 @@ void print_usage(std::string program_name)
     OPTION_CONTROLLER_K4);
 }
 
-int main(int argc, char * argv[])
+int main(int argc, char * argv[]) __attribute__((pirate_enclave_main("pendulum_controller")))
 {
   // common options
   bool auto_activate = false;
