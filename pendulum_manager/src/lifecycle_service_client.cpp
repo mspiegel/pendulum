@@ -41,7 +41,7 @@ LifecycleServiceClient::get_state(std::chrono::seconds time_out)
 
   if (future_status != std::future_status::ready) {
     RCLCPP_ERROR(rclcpp::get_logger(lifecycle_node_),
-      "Server time out while getting current state for node %s", lifecycle_node_);
+      "Server time out while getting current state for node %s", lifecycle_node_.c_str());
     return lifecycle_msgs::msg::State::PRIMARY_STATE_UNKNOWN;
   }
 
@@ -52,7 +52,7 @@ LifecycleServiceClient::get_state(std::chrono::seconds time_out)
     return future_result.get()->current_state.id;
   } else {
     RCLCPP_ERROR(rclcpp::get_logger(lifecycle_node_),
-      "Failed to get current state for node %s", lifecycle_node_);
+      "Failed to get current state for node %s", lifecycle_node_.c_str());
     return lifecycle_msgs::msg::State::PRIMARY_STATE_UNKNOWN;
   }
 }
@@ -79,7 +79,7 @@ LifecycleServiceClient::change_state(std::uint8_t transition, std::chrono::secon
 
   if (future_status != std::future_status::ready) {
     RCLCPP_ERROR(rclcpp::get_logger(lifecycle_node_),
-      "Server time out while getting current state for node %s", lifecycle_node_);
+      "Server time out while getting current state for node %s", lifecycle_node_.c_str());
     return false;
   }
 
